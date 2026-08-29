@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Control bioambiental</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">TRANSPORTE DE LARVAS</p>
+      <h1>Control bioambiental</h1>
+    </div>
+    <div id="conexion" class="status offline">Sin conexión</div>
+  </header>
+
+  <main>
+    <section class="readings" aria-label="Lecturas actuales">
+      <article class="reading temp">
+        <span>Temperatura</span>
+        <strong><b id="temperatura">--.-</b> °C</strong>
+        <small>Control local continuo</small>
+      </article>
+      <article class="reading ph">
+        <span>pH observado</span>
+        <strong id="ph">--.--</strong>
+        <small>Sensor con lectura referencial</small>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="section-title">
+        <div><p class="eyebrow">OPERACIÓN LOCAL</p><h2>Control manual</h2></div>
+        <span id="modo" class="badge">AUTOMÁTICO</span>
+      </div>
+      <p class="warning">Al usar un interruptor, el sistema cambia a modo manual.</p>
+      <div class="controls">
+        <label class="control">
+          <span><b>Bomba</b><small>Inyección de solución</small></span>
+          <input id="bomba" type="checkbox"><i></i>
+        </label>
+        <label class="control">
+          <span><b>Peltier</b><small>Enfriamiento y ventilación</small></span>
+          <input id="peltier" type="checkbox"><i></i>
+        </label>
+      </div>
+    </section>
+
+    <section class="panel trip">
+      <div class="section-title">
+        <div><p class="eyebrow">TRAZABILIDAD</p><h2>Viaje</h2></div>
+        <span id="viajeEstado" class="badge neutral">SIN VIAJE</span>
+      </div>
+      <div id="formViaje" class="form-grid">
+        <label>Origen<input id="origen" maxlength="47" placeholder="Laboratorio A"></label>
+        <label>Destino<input id="destino" maxlength="47" placeholder="Camaronera B"></label>
+        <label>Tanque<input id="tanque" maxlength="31" placeholder="Tanque 01"></label>
+        <button id="iniciarViaje" class="primary">Iniciar viaje</button>
+      </div>
+      <div id="viajeActivo" class="trip-active hidden">
+        <dl>
+          <div><dt>Ruta</dt><dd id="rutaViaje">—</dd></div>
+          <div><dt>Tanque</dt><dd id="tanqueViaje">—</dd></div>
+          <div><dt>Inicio</dt><dd id="inicioViaje">—</dd></div>
+          <div><dt>ID</dt><dd id="idViaje">—</dd></div>
+        </dl>
+        <button id="finalizarViaje" class="danger">Finalizar viaje</button>
+      </div>
+    </section>
+
+    <section class="system-line">
+      <span>Wi-Fi <b id="wifi">—</b></span>
+      <span>Ubidots <b id="nube">—</b></span>
+      <span>Memoria <b id="heap">—</b></span>
+    </section>
+  </main>
+  <div id="toast" role="status"></div>
+  <script src="/script.js"></script>
+</body>
+</html>
