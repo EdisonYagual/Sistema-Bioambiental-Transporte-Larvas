@@ -74,11 +74,19 @@ Sensores de temperatura y pH
 ```text
 .
 |-- data/                 # Interfaz web almacenada en el ESP32
-|-- docs/imagenes/        # Fotografías y capturas del prototipo
+|-- docs/                 # Documento de diseño y evidencias gráficas
+|   |-- DOCUMENTO_DE_DISENO.md
+|   `-- imagenes/
 |-- src/                  # Firmware del ESP32
 |-- platformio.ini        # Configuración y dependencias
 `-- README.md             # Documentación principal
 ```
+
+## Documento de diseño
+
+La versión corregida del documento académico, junto con sus diagramas de
+contexto, bloques, estados e interfaces, está disponible en
+[Documento de Diseño](docs/DOCUMENTO_DE_DISENO.md).
 
 ## Conexiones principales
 
