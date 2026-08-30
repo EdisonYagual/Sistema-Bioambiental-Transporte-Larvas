@@ -49,11 +49,17 @@ Sensores de temperatura y pH
 |---|---|---|
 | ![Menú principal](docs/imagenes/pantalla-monitoreo-3.jpeg) | ![Datos del sistema](docs/imagenes/pantalla-monitoreo-2.jpeg) | ![Modo automático](docs/imagenes/pantalla-monitoreo-1.jpeg) |
 
-### Interfaz web y trazabilidad
+### Interfaz web desde una computadora
 
-| Control desde el celular | Viaje en curso |
+| Panel de monitoreo y control | Trazabilidad de un viaje |
 |---|---|
-| ![Control web](docs/imagenes/control-web-celular.jpeg) | ![Trazabilidad](docs/imagenes/trazabilidad-web.jpeg) |
+| ![Panel web visto desde una computadora](docs/imagenes/control-web-computadora.jpeg) | ![Trazabilidad vista desde una computadora](docs/imagenes/trazabilidad-web-computadora.jpeg) |
+
+### Interfaz web adaptable para celular
+
+| Monitoreo y control | Registro de un viaje | Viaje en curso |
+|---|---|---|
+| <img src="docs/imagenes/sitio-web-celular.jpeg" width="260" alt="Monitoreo y control desde un celular"> | <img src="docs/imagenes/inicio-viaje-celular.jpeg" width="260" alt="Formulario para iniciar un viaje desde un celular"> | <img src="docs/imagenes/trazabilidad-viaje-celular.jpeg" width="260" alt="Trazabilidad de un viaje en curso desde un celular"> |
 
 ### Plataforma Ubidots
 
