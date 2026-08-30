@@ -1,4 +1,4 @@
-# Sistema automatizado de control bioambiental para el transporte de larvas
+# SISTEMA AUTOMATIZADO DE CONTROL BIOAMBIENTAL Y CONECTIVIDAD INTELIGENTE PARA EL TRANSPORTE DE LARVAS EN TANQUES
 
 Prototipo embebido basado en **ESP32 y FreeRTOS** para monitorear las condiciones
 del agua durante el transporte de larvas de camarón. El sistema integra medición
