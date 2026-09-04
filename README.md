@@ -113,6 +113,26 @@ su propia señal `CS`. El pin de interrupción `T_IRQ` del XPT2046 no se utiliza
 esta versión. El detalle de señales, alimentación y precauciones eléctricas se
 encuentra en [Conexiones completas del ESP32](docs/CONEXIONES_ESP32.md).
 
+## Esquemático electrónico y diseño PCB
+
+El siguiente esquemático representa las conexiones del prototipo final con el
+ESP32, el sensor DS18B20, el módulo PH-4502C, la pantalla táctil ILI9341 y el
+módulo de relés.
+
+![Esquemático electrónico desarrollado en Proteus](docs/esquematico/esquematico-proteus.png)
+
+El diseño de la placa muestra la distribución de conectores y las pistas del
+circuito impreso.
+
+![Diseño PCB desarrollado en Proteus](docs/esquematico/diseno-pcb.png)
+
+### Descarga del proyecto de Proteus
+
+[**Descargar PCBCAMARONES.pdsprj**](docs/esquematico/PCBCAMARONES.pdsprj?raw=1)
+
+El archivo contiene el esquemático y el diseño PCB. Para abrirlo se requiere
+Proteus Design Suite.
+
 ## Requisitos
 
 - Visual Studio Code con PlatformIO, o PlatformIO Core.
