@@ -88,22 +88,30 @@ La versión corregida del documento académico, junto con sus diagramas de
 contexto, bloques, estados e interfaces, está disponible en
 [Documento de Diseño](docs/DOCUMENTO_DE_DISENO.md).
 
-## Conexiones principales
+## Conexiones del ESP32
 
-| Función | GPIO |
-|---|---:|
-| TFT CS | 5 |
-| TFT DC | 16 |
-| TFT RESET | 17 |
-| Iluminación TFT | 32 |
-| SPI SCK | 18 |
-| SPI MISO | 19 |
-| SPI MOSI | 23 |
-| Touch CS | 25 |
-| Sensor DS18B20 | 4 |
-| Sensor de pH | 34 |
-| Celda Peltier | 27 |
-| Bomba | 26 |
+| GPIO del ESP32 | Conectado a | Terminal o señal | Función |
+|---:|---|---|---|
+| VIN / 5V | Regulador LM2596 | Salida de 5 V | Alimentación de la placa ESP32 |
+| 3V3 | Sensor DS18B20 y lógica compatible | VCC | Alimentación de 3.3 V |
+| GND | Todos los módulos | GND | Referencia eléctrica común |
+| 4 | Sensor DS18B20 | DQ / DATA | Lectura digital de temperatura mediante One-Wire |
+| 5 | Pantalla TFT ILI9341 | TFT_CS / CS | Selección de la pantalla en el bus SPI |
+| 16 | Pantalla TFT ILI9341 | TFT_DC / DC | Selección entre datos y comandos |
+| 17 | Pantalla TFT ILI9341 | TFT_RST / RESET | Reinicio de la pantalla |
+| 18 | Pantalla ILI9341 y táctil XPT2046 | SCK y T_CLK | Reloj compartido del bus SPI |
+| 19 | Pantalla ILI9341 y táctil XPT2046 | MISO/SDO y T_DO | Datos SPI desde los periféricos hacia el ESP32 |
+| 23 | Pantalla ILI9341 y táctil XPT2046 | MOSI/SDI y T_DIN | Datos SPI desde el ESP32 hacia los periféricos |
+| 25 | Controlador táctil XPT2046 | T_CS | Selección del controlador táctil |
+| 26 | Módulo de relés | IN1, canal de la bomba | Encendido y apagado de la bomba de 12 V |
+| 27 | Módulo de relés | IN2, canal Peltier | Encendido y apagado de la celda Peltier y su ventilador |
+| 32 | Pantalla TFT ILI9341 | LED / BL | Control PWM de la retroiluminación |
+| 34 | Módulo PH-4502C | PO / salida analógica | Lectura referencial de pH mediante el ADC |
+
+El bus SPI es compartido por la pantalla y el controlador táctil; cada uno posee
+su propia señal `CS`. El pin de interrupción `T_IRQ` del XPT2046 no se utiliza en
+esta versión. El detalle de señales, alimentación y precauciones eléctricas se
+encuentra en [Conexiones completas del ESP32](docs/CONEXIONES_ESP32.md).
 
 ## Requisitos
 
