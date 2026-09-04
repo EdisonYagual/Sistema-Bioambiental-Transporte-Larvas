@@ -133,6 +133,10 @@ circuito impreso.
 El archivo contiene el esquemático y el diseño PCB. Para abrirlo se requiere
 Proteus Design Suite.
 
+> **Nota de descarga:** GitHub no puede previsualizar el formato `.pdsprj` y en
+> algunos navegadores puede mostrar el mensaje **“Error loading page”**. Si esto
+> ocurre, presione `F5` o recargue la página para iniciar la descarga del archivo.
+
 ## Requisitos
 
 - Visual Studio Code con PlatformIO, o PlatformIO Core.
